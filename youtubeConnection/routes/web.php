@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UrlsearcherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('search', function () {return view('search');}); //検索画面
+Route::get('videoUpload', function () {return view('videoUpload');}); //動画投稿画面
+
+Route::post('search/urlSearcher', [UrlsearcherController::class,'urlsearch']); //URL検索
