@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>動画投稿画面</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -21,15 +21,12 @@
         <a href="/">youtubeConnection</a>
     </div>
     <div class="main">
-        <h1>youtubeConnection</h1>
-        <div class="selectMenu">
-            <form class="main_select" action="search" method="GET">
-                <input type="submit" value="検索画面">
-            </form>
-            <form class="main_select" action="videoUpload" method="GET">
-                <input type="submit" value="動画投稿画面">
-            </form>
+        <h1>動画投稿画面</h1>
+        <div class="message">
+            ただいま準備中のため、今しばらくお待ちください。
         </div>
+        <br>
+        <a style="text-decoration:none;color:white;" href="/">トップページへ戻る</a>
     </div>
 
 </body>

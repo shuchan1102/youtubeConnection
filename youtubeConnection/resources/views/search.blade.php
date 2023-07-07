@@ -12,6 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/welcomeStyle.css">
     <link rel="stylesheet" href="/css/headerStyle.css">
+    <link rel="stylesheet" href="/css/searchStyle.css">
     <!-- Styles -->
 </head>
 
@@ -22,12 +23,14 @@
     </div>
     <div class="main">
         <h1>youtubeConnection</h1>
-        <div class="selectMenu">
-            <form class="main_select" action="search" method="GET">
-                <input type="submit" value="検索画面">
-            </form>
-            <form class="main_select" action="videoUpload" method="GET">
-                <input type="submit" value="動画投稿画面">
+        <div>
+            検索したいyoutubeチャンネルのトップページURLを入力
+            <form action="search/urlSearcher" method="POST">
+                @csrf
+                <br>
+                <input type="text" class="url" name="url" id="url" placeholder="例）https://www.youtube.com/@HikakinTV">
+                <br><br>
+                <input type="submit" value="検索開始">
             </form>
         </div>
     </div>
