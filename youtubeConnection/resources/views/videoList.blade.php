@@ -23,7 +23,31 @@
     <div class="main">
         <h1>動画情報詳細一覧</h1>
         <div class="message">
-            ただいま準備中のため、今しばらくお待ちください。
+            @for($i = 0; $i < count($videosInfo);$i++)
+            <table>
+                <tr>
+                    <th>動画タイトル</th>
+                    <td style="text-align:left;">{{$videosInfo[$i]['title']}}</td>
+                </tr>
+                <tr>
+                    <th>再生回数</th>
+                    <td style="text-align:left;">{{$videosInfo[$i]['viewCount']}}回</td>
+                </tr>
+                <tr>
+                    <th>コメント数</th>
+                    <td style="text-align:left;">{{$videosInfo[$i]['commentCount']}}件</td>
+                </tr>
+                <tr>
+                    <th>高評価数</th>
+                    <td style="text-align:left;">{{$videosInfo[$i]['likeCount']}}件</td>
+                </tr>
+                <tr>
+                    <th>高評価率</th>
+                    <td style="text-align:left;">{{$videosInfo[$i]['likeCountPer']}}％</td>
+                </tr>
+                </table>
+
+                @endfor
         </div>
         <br>
         <a style="text-decoration:none;color:white;" href="/">トップページへ戻る</a>
